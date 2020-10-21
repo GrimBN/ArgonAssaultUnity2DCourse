@@ -136,7 +136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4807919409406754201, guid: 8f05a9aa9dbc4b6458916cc2f24ff98c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -4.83
       objectReference: {fileID: 0}
     - target: {fileID: 4807919409406754201, guid: 8f05a9aa9dbc4b6458916cc2f24ff98c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -144,7 +144,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4807919409406754201, guid: 8f05a9aa9dbc4b6458916cc2f24ff98c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.97
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 4807919409406754201, guid: 8f05a9aa9dbc4b6458916cc2f24ff98c, type: 3}
       propertyPath: m_LocalRotation.x
@@ -202,6 +202,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba0e7a13856203345ade84bb992ed420, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  xSpeed: 25
+  horizontalRange: 5
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -440,7 +442,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 75
   orthographic: 0
   orthographic size: 5
   m_Depth: -1

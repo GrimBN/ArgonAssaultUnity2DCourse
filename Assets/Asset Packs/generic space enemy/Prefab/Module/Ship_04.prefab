@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4248845843280306}
   - component: {fileID: 33029633340997774}
   - component: {fileID: 23169957688585980}
-  - component: {fileID: 400599646}
+  - component: {fileID: 6001454114780394360}
   m_Layer: 0
   m_Name: Ship_04
   m_TagString: Untagged
@@ -82,16 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &400599646
-BoxCollider:
+--- !u!114 &6001454114780394360
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1469320689751860}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.38488355, y: 0.51466954, z: 0.17804626}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00dab71324bd0b042a3e4dcdc4c9ba22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathFX: {fileID: 6154079188972818201, guid: f01f7be6397dda24aa15ac804f718953, type: 3}

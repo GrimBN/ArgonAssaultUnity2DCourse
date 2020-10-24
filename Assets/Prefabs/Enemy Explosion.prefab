@@ -12,13 +12,14 @@ GameObject:
   - component: {fileID: 6154079188972818202}
   - component: {fileID: 6154079188972818203}
   - component: {fileID: 6154079188972818200}
+  - component: {fileID: -6692020276851887882}
   m_Layer: 0
-  m_Name: Explosion
+  m_Name: Enemy Explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6154079188972818197
 Transform:
   m_ObjectHideFlags: 0
@@ -26,13 +27,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6154079188972818201}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 277.6651, y: -31.39814, z: 537.4}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!198 &6154079188972818202
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -227,7 +228,7 @@ ParticleSystem:
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
-        key1: {r: 0.042452812, g: 1, b: 0.90460014, a: 1}
+        key1: {r: 0.70980394, g: 1, b: 0.4156863, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -3562,12 +3563,12 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 1, b: 1, a: 0.48235294}
-        key1: {r: 0, g: 1, b: 0.9218221, a: 0.48235294}
-        key2: {r: 0.1745283, g: 0.4831363, b: 1, a: 0}
-        key3: {r: 0.26309788, g: 0.14173195, b: 0.46226418, a: 0}
+        key0: {r: 1, g: 1, b: 1, a: 1}
+        key1: {r: 0.6566126, g: 1, b: 0.3066038, a: 1}
+        key2: {r: 0.077503525, g: 0.8396226, b: 0, a: 0}
+        key3: {r: 0.020371366, g: 0.3301887, b: 0.0015574975, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
-        key5: {r: 1, g: 0.58961666, b: 0, a: 0}
+        key5: {r: 1, g: 1, b: 1, a: 0}
         key6: {r: 1, g: 1, b: 1, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
         ctime0: 0
@@ -3575,7 +3576,7 @@ ParticleSystem:
         ctime2: 41441
         ctime3: 55898
         ctime4: 65535
-        ctime5: 51657
+        ctime5: 65535
         ctime6: 65535
         ctime7: 0
         atime0: 0
@@ -4918,3 +4919,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-6692020276851887882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6154079188972818201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec462fa4acabebb459993a50cff3baf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

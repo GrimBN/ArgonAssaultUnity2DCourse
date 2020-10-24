@@ -2,26 +2,34 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
-    [Tooltip("In ms^-1")] [SerializeField] float xSpeed = 5f, ySpeed = 5f;
-    [Tooltip("In m")][SerializeField] float horizontalRange = 5f, yMin = -3f, yMax = 3f;
-    [SerializeField] float positionPitchFactor = -7f;
-    [SerializeField] float controlPitchFactor = -20f;
-    [SerializeField] float positionYawFactor = 5f;
-    [SerializeField] float controlRollFactor = -20f;
-    [Tooltip("Small value to correct apparent roll due to perspective")][SerializeField] float positionRollFactor = 2f;
+    [Header("General")]
+    [Tooltip("In ms^-1")] [SerializeField] float xSpeed = 5f;
+    [Tooltip("In ms^-1")] [SerializeField] float ySpeed = 5f;
+    [Tooltip("In m")] [SerializeField] float horizontalRange = 5f;
+    [Tooltip("In m")] [SerializeField] float yMin = -3f;
+    [Tooltip("In m")] [SerializeField] float yMax = 3f;
+    bool isAlive = true;
 
-    void Start()
-    {
+    [Header("Position-based stuff")]
+    [SerializeField] float positionPitchFactor = -7f;
+    [SerializeField] float positionYawFactor = 5f;
+    [Tooltip("Small value to correct apparent roll due to perspective")] [SerializeField] float positionRollFactor = 2f;
+
+    [Header("Control-based stuff")]
+    [SerializeField] float controlPitchFactor = -20f;    
+    [SerializeField] float controlRollFactor = -20f;
         
-    }
     
     void Update()
     {
-        MoveShip();
-        RotateShip();
-    }
+        if (isAlive)
+        {
+            MoveShip();
+            RotateShip();
+        }
+    }  
 
     private void MoveShip()
     {
@@ -51,5 +59,10 @@ public class Player : MonoBehaviour
         float roll = Input.GetAxis("Horizontal") * controlRollFactor + rollDueToPerspectiveCorrection;
         
         transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
+    }
+
+    public void PlayerDeath() // CALLED BY STRING REFERENCE!!
+    {
+        isAlive = false;        
     }
 }

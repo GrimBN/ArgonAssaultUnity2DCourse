@@ -25,7 +25,7 @@ public class Enemy : MonoBehaviour
 
     private void OnParticleCollision(GameObject other)
     {
-        //Change A
+        //Change B
         GameObject fx = Instantiate(deathFX, transform.position, Quaternion.identity, explosionParent);                
         Destroy(gameObject);
     }

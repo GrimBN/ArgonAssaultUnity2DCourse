@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,6 +11,7 @@ public class PlayerController : MonoBehaviour
     [Tooltip("In m")] [SerializeField] float horizontalRange = 5f;
     [Tooltip("In m")] [SerializeField] float yMin = -3f;
     [Tooltip("In m")] [SerializeField] float yMax = 3f;
+    [SerializeField] GameObject[] guns;
     bool isAlive = true;
 
     [Header("Position-based stuff")]
@@ -28,9 +30,11 @@ public class PlayerController : MonoBehaviour
         {
             MoveShip();
             RotateShip();
+            FireGuns();
         }
-    }  
+    }
 
+    
     private void MoveShip()
     {
         float xOffset = Input.GetAxis("Horizontal") * xSpeed * Time.deltaTime;
@@ -60,6 +64,34 @@ public class PlayerController : MonoBehaviour
         
         transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
     }
+
+    private void FireGuns()
+    {
+        if (Input.GetButton("Fire"))
+        {
+            ActivateGuns();
+        }
+        else
+        {
+            DeactivateGuns();
+        }
+    }
+
+    private void ActivateGuns()
+    {
+        foreach (GameObject gun in guns)
+        {
+            gun.SetActive(true);
+        }
+    }
+
+    private void DeactivateGuns()
+    {
+        foreach (GameObject gun in guns)
+        {
+            gun.SetActive(false);
+        }
+    }    
 
     public void PlayerDeath() // CALLED BY STRING REFERENCE!!
     {

@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     [Tooltip("In m")] [SerializeField] float yMax = 3f;
     [SerializeField] ParticleSystem[] guns;
     bool isAlive = true;
+   // CollisionHandler collisionHandler;
 
     [Header("Position-based stuff")]
     [SerializeField] float positionPitchFactor = -7f;
@@ -22,8 +23,13 @@ public class PlayerController : MonoBehaviour
     [Header("Control-based stuff")]
     [SerializeField] float controlPitchFactor = -20f;    
     [SerializeField] float controlRollFactor = -20f;
-        
-    
+
+    /*private void Start()
+    {
+        collisionHandler = GetComponent<CollisionHandler>();
+    }*/
+
+
     void Update()
     {
         if (isAlive)

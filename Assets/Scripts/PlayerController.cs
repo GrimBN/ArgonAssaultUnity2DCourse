@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     [Tooltip("In m")] [SerializeField] float horizontalRange = 5f;
     [Tooltip("In m")] [SerializeField] float yMin = -3f;
     [Tooltip("In m")] [SerializeField] float yMax = 3f;
-    [SerializeField] GameObject[] guns;
+    [SerializeField] ParticleSystem[] guns;
     bool isAlive = true;
 
     [Header("Position-based stuff")]
@@ -69,27 +69,20 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetButton("Fire"))
         {
-            ActivateGuns();
+            SetActiveGuns(true);
         }
         else
         {
-            DeactivateGuns();
+            SetActiveGuns(false);
         }
-    }
+    }    
 
-    private void ActivateGuns()
+    private void SetActiveGuns(bool isActive)
     {
-        foreach (GameObject gun in guns)
+        foreach (ParticleSystem gun in guns)
         {
-            gun.SetActive(true);
-        }
-    }
-
-    private void DeactivateGuns()
-    {
-        foreach (GameObject gun in guns)
-        {
-            gun.SetActive(false);
+            ParticleSystem.EmissionModule emissionModule = gun.emission;
+            emissionModule.enabled = isActive;
         }
     }    
 

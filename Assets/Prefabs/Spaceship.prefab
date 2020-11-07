@@ -103,6 +103,9 @@ MonoBehaviour:
   horizontalRange: 5.5
   yMin: -4
   yMax: 4
+  guns:
+  - {fileID: 1761286305}
+  - {fileID: 8512708133508705335}
   positionPitchFactor: -7
   positionYawFactor: 5
   positionRollFactor: -0.5
@@ -121,6 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathExplosionFX: {fileID: 6154079190370278992}
+  levelLoadDelay: 2
 --- !u!1001 &1020283498
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -178,6 +182,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab86d5332375e814091d6dfb26da578e, type: 3}
+--- !u!198 &8512708133508705335 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8512708132773635677, guid: ab86d5332375e814091d6dfb26da578e, type: 3}
+  m_PrefabInstance: {fileID: 1020283498}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8512708133508705333 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8512708132773635679, guid: ab86d5332375e814091d6dfb26da578e, type: 3}
@@ -1690,5 +1699,10 @@ PrefabInstance:
 --- !u!4 &1761286307 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8512708132773635679, guid: ab86d5332375e814091d6dfb26da578e, type: 3}
+  m_PrefabInstance: {fileID: 8512708132101046012}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1761286305 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8512708132773635677, guid: ab86d5332375e814091d6dfb26da578e, type: 3}
   m_PrefabInstance: {fileID: 8512708132101046012}
   m_PrefabAsset: {fileID: 0}
